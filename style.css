@@ -1,36 +1,30 @@
-.rp_post_result_one,.rp_post_result_two,.rp_post_result_three{
-
-position: absolute;
-
-background: #fff;
-
-border: 1px solid #000;
-
-z-index: 999;
-
-width: 52%;
-
-margin-left: 62px;
-
-padding-left: 10px;
-
-padding-right: 10px;
-
-display: none;
-height: 300px;
-overflow-x: auto;
+.rp_post_result_one,
+.rp_post_result_two,
+.rp_post_result_three {
+  display: none;
+  position: absolute;
+  width: 52%;
+  height: 300px;
+  background: #fff;
+  margin-left: 62px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #000;
+  overflow-x: auto;
+  z-index: 999;
 }
 
-p.rp_link{
-font-size: 16px;
-font-weight: bold;
-color: #193e68;
-float: left;
-padding-right: 10px;
+p.rp_link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #193e68;
+  float: left;
+  padding-right: 10px;
 }
+
 p.rp_link a {
-color: #3399cc;
-font-size: 16px;
-font-style: italic;
-font-weight: 400;
+  color: #3399cc;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
 }
