@@ -1,11 +1,14 @@
 <?php
 /*
 * Plugin Name: Related Links Inside Content
+* Plugin URI: https://wordpress.org/plugins/related-links-inside-content/
 * Description: Search and add your related post links directly inside your posts using shortcode.
 * Author: Tareq Anwar
 * Author URI: http://www.tareqanwar.com
 * Version: 1.0
 * License: GPLv2
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+* Tags: related post, related link, related sotry
 */
 
 
