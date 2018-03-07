@@ -1,7 +1,7 @@
 <?php
 /*
-* Plugin Name: WP Related Posts Plugin
-* Description: Search and add your related post links directly inside your posts.
+* Plugin Name: Related Links Inside Content
+* Description: Search and add your related post links directly inside your posts using shortcode.
 * Author: Tareq Anwar
 * Author URI: http://www.tareqanwar.com
 * Version: 1.0
