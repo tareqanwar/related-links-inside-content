@@ -48,16 +48,6 @@ add_action( 'admin_enqueue_scripts', 'rp_js_url' );
 
 
 // Define some useful constants that can be used by functions
-if ( ! defined( 'WP_CONTENT_URL' ) ) {	
-	if ( ! defined( 'WP_SITEURL' ) ) define( 'WP_SITEURL', get_option("siteurl") );
-	define( 'WP_CONTENT_URL', WP_SITEURL . '/wp-content' );
-}
-
-if ( ! defined( 'WP_SITEURL' ) ) define( 'WP_SITEURL', get_option("siteurl") );
-if ( ! defined( 'WP_CONTENT_DIR' ) ) define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
-if ( ! defined( 'WP_PLUGIN_URL' ) ) define( 'WP_PLUGIN_URL', WP_CONTENT_URL. '/plugins' );
-if ( ! defined( 'WP_PLUGIN_DIR' ) ) define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
-
 if ( basename(dirname(__FILE__)) == 'plugins' )
 	define("BLANK_DIR",'');
 else define("BLANK_DIR" , basename(dirname(__FILE__)) . '/');
