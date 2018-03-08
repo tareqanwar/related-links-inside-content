@@ -23,15 +23,15 @@ Search and add your related post links directly inside your posts using the shor
 
 # Frequently asked questions
 
-= How will I add a related link inside post? =
+### How will I add a related link inside post? =
 
 Go to add post or edit post page. You will see a custom post box named "Select One to Three Related Posts (Optional)". You can search your related posts on the three input fields there. You don't have to use all three of them everytime. You can use as much links as you want. Just copy the shortcode from next input field inside your post content. You see the related story link in your output.
 
-= Can I add more than three links? =
+### Can I add more than three links? =
 
 For now, you can add up to three links. I have plan make it dynam, users will be able to add as many links as they want.
 
-= Can I change the "Related Story" text from output? =
+### Can I change the "Related Story" text from output? =
 
 I have plan to add the customization features in next versions.
 
