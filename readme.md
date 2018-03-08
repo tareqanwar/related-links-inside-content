@@ -37,11 +37,16 @@ I have plan to add the customization features in next versions.
 
 ## Screenshots
 
-1. Related story link inside post
+#### Related story link inside post
+
 ![Related story link inside post](screenshots/screenshot-one.png)
-2. "Select One to Three Related Posts (Optional)" box inside add or edit new post/page
+
+#### "Select One to Three Related Posts (Optional)" box inside add or edit new post/page
+
 !["Select One to Three Related Posts (Optional)" box inside add or edit new post/page](screenshots/screenshot-two.png)
-3. Search output
+
+#### Search output
+
 !["Search output](screenshots/screenshot-three.png)
 
 ## Changelog
