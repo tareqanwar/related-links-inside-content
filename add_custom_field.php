@@ -80,7 +80,7 @@ function rlic_tareqanwar_meta_box_callback( $post ) {
 
 	echo '</label> ';
 
-	echo '<input type="text" id="rlic_tareqanwar_new_field_one" name="rlic_tareqanwar_post_id_one" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_one )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_one]" size="18" />';
+	echo '<input type="text" id="rlic_tareqanwar_new_field_one" name="rlic_tareqanwar_post_id_one" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_one )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_one]" size="18" readonly/>';
 	
 	echo '<input type="hidden" name="rlic_tareqanwar_post_link_one" value="'.$rlic_tareqanwar_post_link_one.'" id="rlic_tareqanwar_post_link_one" />';
 		
@@ -94,7 +94,7 @@ function rlic_tareqanwar_meta_box_callback( $post ) {
 
 	echo '</label> ';
 
-	echo '<input type="text" id="rlic_tareqanwar_new_field_two" name="rlic_tareqanwar_post_id_two" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_two )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_two]" size="18" />';
+	echo '<input type="text" id="rlic_tareqanwar_new_field_two" name="rlic_tareqanwar_post_id_two" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_two )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_two]" size="18" readonly/>';
 	
 	echo '<input type="hidden" name="rlic_tareqanwar_post_link_two" id="rlic_tareqanwar_post_link_two" value="'.$rlic_tareqanwar_post_link_two.'" />';
 	
@@ -108,7 +108,7 @@ function rlic_tareqanwar_meta_box_callback( $post ) {
 
 	echo '</label> ';
 
-	echo '<input type="text" id="rlic_tareqanwar_new_field_three" name="rlic_tareqanwar_post_id_three" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_three )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_three]" size="18" />';
+	echo '<input type="text" id="rlic_tareqanwar_new_field_three" name="rlic_tareqanwar_post_id_three" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_three )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_three]" size="18" readonly/>';
 	
 	echo '<input type="hidden" name="rlic_tareqanwar_post_link_three" id="rlic_tareqanwar_post_link_three" value="'.$rlic_tareqanwar_post_link_three.'" />';
 
