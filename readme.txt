@@ -43,8 +43,6 @@ I have plan to add the customization features in next versions.
 screenshots/screenshot-one.png, screenshots/screenshot-two.png, screenshots/screenshot-three.png
 
 == Changelog ==
-
-== Changelog ==
 = 1.0 =
 * Initial Release
 
