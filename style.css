@@ -1,11 +1,10 @@
-.rp_post_result_one,
-.rp_post_result_two,
-.rp_post_result_three {
+.rlic_tareqanwar_post_result_one,
+.rlic_tareqanwar_post_result_two,
+.rlic_tareqanwar_post_result_three {
   display: none;
   position: absolute;
-  width: 52%;
-  height: 300px;
   background: #fff;
+  min-width: 250px;
   margin-left: 62px;
   padding-left: 10px;
   padding-right: 10px;
@@ -14,17 +13,24 @@
   z-index: 999;
 }
 
-p.rp_link {
+p.rlic_tareqanwar_link {
   font-size: 16px;
   font-weight: bold;
   color: #193e68;
-  float: left;
-  padding-right: 10px;
 }
 
-p.rp_link a {
+p.rlic_tareqanwar_link a {
   color: #3399cc;
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .rlic_tareqanwar_post_box {
+    max-width: 100%;
+  }
+  .rlic_tareqanwar_label {
+    display: block;
+  }
 }

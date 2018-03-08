@@ -6,7 +6,7 @@
 
  */
 
-function rp_add_meta_box() {
+function rlic_tareqanwar_add_meta_box() {
 
 
 
@@ -20,11 +20,11 @@ function rp_add_meta_box() {
 
 		add_meta_box(
 
-			'rp_meta_box',
+			'rlic_tareqanwar_meta_box',
 
-			__( 'Select One to Three Related Posts (Optional)', 'rp_post_id' ),
+			__( 'Select One to Three Related Posts (Optional)', 'rlic_tareqanwar_post_id' ),
 
-			'rp_meta_box_callback',
+			'rlic_tareqanwar_meta_box_callback',
 
 			$screen, 'normal', 'high'
 
@@ -34,7 +34,7 @@ function rp_add_meta_box() {
 
 }
 
-add_action( 'add_meta_boxes', 'rp_add_meta_box' );
+add_action( 'add_meta_boxes', 'rlic_tareqanwar_add_meta_box' );
 
 
 
@@ -50,13 +50,13 @@ add_action( 'add_meta_boxes', 'rp_add_meta_box' );
 
  */
 
-function rp_meta_box_callback( $post ) {
+function rlic_tareqanwar_meta_box_callback( $post ) {
 
 
 
 	// Add an nonce field so we can check for it later.
 
-	wp_nonce_field( 'rp_meta_box', 'rp_meta_box_nonce' );
+	wp_nonce_field( 'rlic_tareqanwar_meta_box', 'rlic_tareqanwar_meta_box_nonce' );
 
 
 
@@ -68,51 +68,51 @@ function rp_meta_box_callback( $post ) {
 
 	 */
 
-	$post_link_one = get_post_meta( $post->ID, 'post_link_one', true );
-	$post_link_two = get_post_meta( $post->ID, 'post_link_two', true );
-	$post_link_three = get_post_meta( $post->ID, 'post_link_three', true );
+	$rlic_tareqanwar_post_link_one = get_post_meta( $post->ID, 'rlic_tareqanwar_post_link_one', true );
+	$rlic_tareqanwar_post_link_two = get_post_meta( $post->ID, 'rlic_tareqanwar_post_link_two', true );
+	$rlic_tareqanwar_post_link_three = get_post_meta( $post->ID, 'rlic_tareqanwar_post_link_three', true );
 
        
 
-	echo '<label for="rp_new_field_one">';
+	echo '<label for="rlic_tareqanwar_new_field_one" class="rlic_tareqanwar_label">';
 
-	_e( 'Post One:', 'post_id_one' );
+	_e( 'Post One: &nbsp;&nbsp;', 'rlic_tareqanwar_post_id_one' );
 
 	echo '</label> ';
 
-	echo '<input type="text" id="rp_new_field_one" name="post_id_one" class="rp_post_box" value="' . get_the_title(esc_attr( $post_link_one )) . '" size="55" autocomplete="off" /> &nbsp; Shortcode:&nbsp; <input type="text" value="[related_post_one]" size="18" />';
+	echo '<input type="text" id="rlic_tareqanwar_new_field_one" name="rlic_tareqanwar_post_id_one" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_one )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_one]" size="18" />';
 	
-	echo '<input type="hidden" name="post_link_one" value="'.$post_link_one.'" id="post_link_one" />';
+	echo '<input type="hidden" name="rlic_tareqanwar_post_link_one" value="'.$rlic_tareqanwar_post_link_one.'" id="rlic_tareqanwar_post_link_one" />';
 		
-	echo "<div class='rp_post_result_one' id='rp_post_result_one'></div>";
+	echo "<div class='rlic_tareqanwar_post_result_one' id='rlic_tareqanwar_post_result_one'></div>";
 	
 	echo "<br />";
 
-	echo '<label for="rp_new_field_two">';
+	echo '<label for="rlic_tareqanwar_new_field_two" class="rlic_tareqanwar_label">';
 
-	_e( 'Post Two:', 'post_id_two' );
+	_e( 'Post Two: &nbsp;&nbsp;', 'rlic_tareqanwar_post_id_two' );
 
 	echo '</label> ';
 
-	echo '<input type="text" id="rp_new_field_two" name="post_id_two" class="rp_post_box" value="' . get_the_title(esc_attr( $post_link_two )) . '" size="55" autocomplete="off" /> &nbsp; Shortcode:&nbsp; <input type="text" value="[related_post_two]" size="18" />';
+	echo '<input type="text" id="rlic_tareqanwar_new_field_two" name="rlic_tareqanwar_post_id_two" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_two )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_two]" size="18" />';
 	
-	echo '<input type="hidden" name="post_link_two" id="post_link_two" value="'.$post_link_two.'" />';
+	echo '<input type="hidden" name="rlic_tareqanwar_post_link_two" id="rlic_tareqanwar_post_link_two" value="'.$rlic_tareqanwar_post_link_two.'" />';
 	
-	echo "<div class='rp_post_result_two' id='rp_post_result_two'></div>";
+	echo "<div class='rlic_tareqanwar_post_result_two' id='rlic_tareqanwar_post_result_two'></div>";
 
 	echo "<br />";
 
-	echo '<label for="rp_new_field_three">';
+	echo '<label for="rlic_tareqanwar_new_field_three" class="rlic_tareqanwar_label">';
 
-	_e( 'Post Three:', 'post_id_three' );
+	_e( 'Post Three:', 'rlic_tareqanwar_post_id_three' );
 
 	echo '</label> ';
 
-	echo '<input type="text" id="rp_new_field_three" name="post_id_three" class="rp_post_box" value="' . get_the_title(esc_attr( $post_link_three )) . '" size="55" autocomplete="off" /> &nbsp; Shortcode:&nbsp; <input type="text" value="[related_post_three]" size="18" />';
+	echo '<input type="text" id="rlic_tareqanwar_new_field_three" name="rlic_tareqanwar_post_id_three" class="rlic_tareqanwar_post_box" value="' . get_the_title(esc_attr( $rlic_tareqanwar_post_link_three )) . '" size="55" autocomplete="off" /> <label class="rlic_tareqanwar_label">&nbsp;Shortcode:</label> <input type="text" value="[rlic_related_post_three]" size="18" />';
 	
-	echo '<input type="hidden" name="post_link_three" id="post_link_three" value="'.$post_link_three.'" />';
+	echo '<input type="hidden" name="rlic_tareqanwar_post_link_three" id="rlic_tareqanwar_post_link_three" value="'.$rlic_tareqanwar_post_link_three.'" />';
 
-	echo "<div class='rp_post_result_three' id='rp_post_result_three'></div>";
+	echo "<div class='rlic_tareqanwar_post_result_three' id='rlic_tareqanwar_post_result_three'></div>";
 
 
 }
@@ -129,7 +129,7 @@ function rp_meta_box_callback( $post ) {
 
  */
 
-function rp_save_meta_box_data( $post_id ) {
+function rlic_tareqanwar_save_meta_box_data( $post_id ) {
 
 
 
@@ -145,7 +145,7 @@ function rp_save_meta_box_data( $post_id ) {
 
 	// Check if our nonce is set.
 
-	if ( ! isset( $_POST['rp_meta_box_nonce'] ) ) {
+	if ( ! isset( $_POST['rlic_tareqanwar_meta_box_nonce'] ) ) {
 
 		return;
 
@@ -155,7 +155,7 @@ function rp_save_meta_box_data( $post_id ) {
 
 	// Verify that the nonce is valid.
 
-	if ( ! wp_verify_nonce( $_POST['rp_meta_box_nonce'], 'rp_meta_box' ) ) {
+	if ( ! wp_verify_nonce( $_POST['rlic_tareqanwar_meta_box_nonce'], 'rlic_tareqanwar_meta_box' ) ) {
 
 		return;
 
@@ -207,7 +207,7 @@ function rp_save_meta_box_data( $post_id ) {
 
 	// Make sure that it is set.
 
-	if ( ! isset( $_POST['post_link_one']) || ! isset( $_POST['post_link_two']) || ! isset( $_POST['post_link_three'])) {
+	if ( ! isset( $_POST['rlic_tareqanwar_post_link_one']) || ! isset( $_POST['rlic_tareqanwar_post_link_two']) || ! isset( $_POST['rlic_tareqanwar_post_link_three'])) {
 
 		return;
 
@@ -216,26 +216,26 @@ function rp_save_meta_box_data( $post_id ) {
 
 
 	// Sanitize user input.
+    
+	$rlic_tareqanwar_post_link_one = sanitize_text_field( $_POST['rlic_tareqanwar_post_link_one'] );
 
-	$post_link_one = sanitize_text_field( $_POST['post_link_one'] );
+	$rlic_tareqanwar_post_link_two = sanitize_text_field( $_POST['rlic_tareqanwar_post_link_two'] );
 
-	$post_link_two = sanitize_text_field( $_POST['post_link_two'] );
-
-	$post_link_three = sanitize_text_field( $_POST['post_link_three'] );
+	$rlic_tareqanwar_post_link_three = sanitize_text_field( $_POST['rlic_tareqanwar_post_link_three'] );
 
 
 
-	// Update the meta field in the database.
+	// Update the meta field in the database. Validte before updating.
 
-	update_post_meta( $post_id, 'post_link_one', $post_link_one );
+	if(is_numeric($rlic_tareqanwar_post_link_one)) update_post_meta( $post_id, 'rlic_tareqanwar_post_link_one', $rlic_tareqanwar_post_link_one );
 
-	update_post_meta( $post_id, 'post_link_two', $post_link_two );
+	if(is_numeric($rlic_tareqanwar_post_link_two)) update_post_meta( $post_id, 'rlic_tareqanwar_post_link_two', $rlic_tareqanwar_post_link_two );
 
-	update_post_meta( $post_id, 'post_link_three', $post_link_three );
+	if(is_numeric($rlic_tareqanwar_post_link_three)) update_post_meta( $post_id, 'rlic_tareqanwar_post_link_three', $rlic_tareqanwar_post_link_three );
 
 }
 
 	
-	add_action( 'save_post', 'rp_save_meta_box_data' );
+	add_action( 'save_post', 'rlic_tareqanwar_save_meta_box_data' );
 
 ?>

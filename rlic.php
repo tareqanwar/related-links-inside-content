@@ -31,27 +31,24 @@ if ( !function_exists( 'add_action' ) ) {
 	exit;
 }
 
-function rp_stylesheet_url() {
-	$rp_url = plugin_dir_url( __FILE__ ) . 'style.css';
-    echo "<link rel='stylesheet' href='" . $rp_url . "' type='text/css' />";
+
+// Adding css files here
+function rlic_tareqanwar_stylesheet_url() {
+	$rlic_tareqanwar_url = plugin_dir_url( __FILE__ ) . 'style.css';
+    echo "<link rel='stylesheet' href='" . $rlic_tareqanwar_url . "' type='text/css' />";
 }
-add_action( 'admin_head', 'rp_stylesheet_url' );
-add_action( 'wp_head', 'rp_stylesheet_url' );
+add_action( 'admin_head', 'rlic_tareqanwar_stylesheet_url' );
+add_action( 'wp_head', 'rlic_tareqanwar_stylesheet_url' );
 
-function rp_js_url($hook) {
-	$rp_url = plugin_dir_url( __FILE__ ) . 'script.js';
-    wp_enqueue_script('my_custom_script', $rp_url, array('jquery'));
-	wp_localize_script( 'my_custom_script', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )) );
-	wp_localize_script( 'my_custom_script', 'rp_vars', array( 'rp_nonce' => wp_create_nonce ('rp_nonce')));
+
+// Adding scripts and enabling ajx using nonce
+function rlic_tareqanwar_js_url($hook) {
+	$rlic_tareqanwar_url = plugin_dir_url( __FILE__ ) . 'script.js';
+    wp_enqueue_script('rlic_tareqanwar_script', $rlic_tareqanwar_url, array('jquery'));
+	wp_localize_script( 'rlic_tareqanwar_script', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )) );
+	wp_localize_script( 'rlic_tareqanwar_script', 'rlic_tareqanwar_vars', array( 'rlic_tareqanwar_nonce' => wp_create_nonce ('rlic_tareqanwar_nonce')));
 }
-add_action( 'admin_enqueue_scripts', 'rp_js_url' );
-
-
-// Define some useful constants that can be used by functions
-if ( basename(dirname(__FILE__)) == 'plugins' )
-	define("BLANK_DIR",'');
-else define("BLANK_DIR" , basename(dirname(__FILE__)) . '/');
-define("BLANK_PATH", WP_PLUGIN_URL . "/" . BLANK_DIR);
+add_action( 'admin_enqueue_scripts', 'rlic_tareqanwar_js_url' );
 
 // http://codex.wordpress.org/Function_Reference/add_action
 
@@ -65,78 +62,52 @@ define("BLANK_PATH", WP_PLUGIN_URL . "/" . BLANK_DIR);
 // showing custom field
 require_once('add_custom_field.php');
 require_once('search_posts.php');
-add_action('wp_ajax_get_keyword', 'get_keyword');
+add_action('wp_ajax_rlic_tareqanwar_get_keyword', 'rlic_tareqanwar_get_keyword');
 
 
-function ShortenText($text)
+function rlic_tareqanwar_shorten_text($text)
 {
+  $chars_limit = 80;
+  $chars_text = strlen($text);
+  $text = $text." ";
 
-$chars_limit = 60;
+  $text = substr($text,0,$chars_limit);
+  $text = substr($text,0,strrpos($text,' '));
 
-$chars_text = strlen($text);
-
-$text = $text." ";
-
-$text = substr($text,0,$chars_limit);
-
-$text = substr($text,0,strrpos($text,' '));
-
-if ($chars_text > $chars_limit)
-{
-$text = $text." ...";
-}
-return $text;
-
+  if ($chars_text > $chars_limit)
+  {
+    $text = $text." ...";
+  }
+  return $text;
 }
 
-
-function releated_post_one( $atts ){
-	$id = get_the_ID();
-	$post_id_one = get_post_meta( $id, 'post_link_one', true );
-	return "<p class='rp_link'>". $thumb . " Related Story: <a href='" . get_permalink( $post_id_one ) ."' >". ShortenText(get_the_title( $post_id_one )) ."</a><div class='stripe-line' style='margin-top: 20px;'></div></p>";
+/* Related Post One */
+function rlic_tareqanwar_related_post_one( $atts ){
+  $id = get_the_ID();
+  $post_id_one = get_post_meta( $id, 'rlic_tareqanwar_post_link_one', true );
+  
+  if(is_numeric($post_id_one)) 
+    return "<p class='rlic_tareqanwar_link'>Related Story: <a href='" . get_permalink( $post_id_one ) ."' >". rlic_tareqanwar_shorten_text(get_the_title( $post_id_one )) ."</a></p>";
 }
-add_shortcode( 'releated_post_one', 'releated_post_one' );
+add_shortcode( 'rlic_related_post_one', 'rlic_tareqanwar_related_post_one' );
 
-function releated_post_two( $atts ){
-	$id = get_the_ID();
-	$post_id_two = get_post_meta( $id, 'post_link_two', true );
-	return "<p class='rp_link'>Related Story: <a href='" . get_permalink( $post_id_two ) ."' >".  ShortenText(get_the_title( $post_id_two )) ."</a><div class='stripe-line' style='margin-top: 26px;'></div></p>";
+/* Related Post Two */
+function rlic_tareqanwar_related_post_two( $atts ){
+  $id = get_the_ID();
+  $post_id_two = get_post_meta( $id, 'rlic_tareqanwar_post_link_two', true );
+  
+  if(is_numeric($post_id_two)) 
+    return "<p class='rlic_tareqanwar_link'>Related Story: <a href='" . get_permalink( $post_id_two ) ."' >".  rlic_tareqanwar_shorten_text(get_the_title( $post_id_two )) ."</a></p>";
 }
-add_shortcode( 'releated_post_two', 'releated_post_two' );
+add_shortcode( 'rlic_related_post_two', 'rlic_tareqanwar_related_post_two' );
 
-function releated_post_three( $atts ){
-	$id = get_the_ID();
-	$post_id_three = get_post_meta( $id, 'post_link_three', true );
-	return "<p class='rp_link'>". $thumb . " Related Story: <a href='" . get_permalink( $post_id_three ) ."' >".  ShortenText(get_the_title( $post_id_three )) ."</a><div class='stripe-line' style='margin-top: 26px;'></div></p><p style='
-    clear: both;
-'></p>";
+/* Related Post Three */
+function rlic_tareqanwar_related_post_three( $atts ){
+  $id = get_the_ID();
+  $post_id_three = get_post_meta( $id, 'rlic_tareqanwar_post_link_three', true );
+  
+  if(is_numeric($post_id_three)) 
+    return "<p class='rlic_tareqanwar_link'>Related Story: <a href='" . get_permalink( $post_id_three ) ."' >".  rlic_tareqanwar_shorten_text(get_the_title( $post_id_three )) ."</a></p>";
 }
-add_shortcode( 'releated_post_three', 'releated_post_three' );
-
-function related_post_one( $atts ){
-	$id = get_the_ID();
-	$post_id_one = get_post_meta( $id, 'post_link_one', true );
-	return "<p class='rp_link'>". $thumb . " Related Story: <a href='" . get_permalink( $post_id_one ) ."' >". ShortenText(get_the_title( $post_id_one )) ."</a><div class='stripe-line' style='margin-top: 26px;'></div></p><p style='
-    clear: both;
-'></p>";
-}
-add_shortcode( 'related_post_one', 'related_post_one' );
-
-function related_post_two( $atts ){
-	$id = get_the_ID();
-	$post_id_two = get_post_meta( $id, 'post_link_two', true );
-	return "<p class='rp_link'>Related Story: <a href='" . get_permalink( $post_id_two ) ."' >".  ShortenText(get_the_title( $post_id_two )) ."</a><div class='stripe-line' style='margin-top: 26px;'></div></p><p style='
-    clear: both;
-'></p>";
-}
-add_shortcode( 'related_post_two', 'related_post_two' );
-
-function related_post_three( $atts ){
-	$id = get_the_ID();
-	$post_id_three = get_post_meta( $id, 'post_link_three', true );
-	return "<p class='rp_link'>". $thumb . " Related Story: <a href='" . get_permalink( $post_id_three ) ."' >".  ShortenText(get_the_title( $post_id_three )) ."</a><div class='stripe-line' style='margin-top: 26px;'></div></p><p style='
-    clear: both;
-'></p>";
-}
-add_shortcode( 'related_post_three', 'related_post_three' );
+add_shortcode( 'rlic_related_post_three', 'rlic_tareqanwar_related_post_three' );
 ?>
