@@ -17,7 +17,7 @@ Search and add your related post links directly inside your posts using the shor
 == Installation ==
 
 1. Upload `related-links-inside-content.zip` to the `/wp-content/plugins/` directory
-2. Extract it there
+2. Extract the zip file there
 3. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently asked questions ==
