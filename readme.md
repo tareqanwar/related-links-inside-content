@@ -1,4 +1,5 @@
-=== Related Links Inside Content ===
+# Related Links Inside Content
+
 Contributors: trqnwr
 Donate link: paypal.me/trqnwr
 Tags: related post, related link, related story
@@ -10,17 +11,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A wordpress plugin to add related post or page links inside post or page content.
 
-== Description ==
+# Description
 
 Search and add your related post links directly inside your posts using the shortcode. When you are adding a new post or editing a post, you will see a custom panel named "Select One to Three Related Posts (Optional)". There you can search posts related to your current post and select the one you want. Then copy and paste the relevant shortcode into your post where you want to show the link. This will show that link in your post.
 
-== Installation ==
+# Installation
 
 1. Upload `related-links-inside-content.zip` to the `/wp-content/plugins/` directory
 2. Extract it there
 3. Activate the plugin through the 'Plugins' menu in WordPress
 
-== Frequently asked questions ==
+# Frequently asked questions
 
 = How will I add a related link inside post? =
 
@@ -34,18 +35,17 @@ For now, you can add up to three links. I have plan make it dynam, users will be
 
 I have plan to add the customization features in next versions.
 
-== Screenshots ==
+# Screenshots
 
 1. Related story link inside post
+![Related story link inside post](screenshots/screenshot-one.png)
 2. "Select One to Three Related Posts (Optional)" box inside add or edit new post/page
+!["Select One to Three Related Posts (Optional)" box inside add or edit new post/page](screenshots/screenshot-two.png)
 3. Search output
+!["Search output](screenshots/screenshot-three.png)
 
-screenshots/screenshot-one.png, screenshots/screenshot-two.png, screenshots/screenshot-three.png
+# Changelog
+- 1.0 
+  * Initial Release
 
-== Changelog ==
-
-== Changelog ==
-= 1.0 =
-* Initial Release
-
-== Upgrade notice ==
+# Upgrade notice ==
