@@ -39,15 +39,15 @@ I have plan to add the customization features in next versions.
 
 #### Related story link inside post
 
-![Related story link inside post](https://plugins.svn.wordpress.org/related-links-inside-content/assets/screenshot-1.jpg)
+![Related story link inside post](https://ps.w.org/related-links-inside-content/assets/screenshot-1.jpg)
 
 #### "Select One to Three Related Posts (Optional)" box inside add or edit new post/page
 
-!["Select One to Three Related Posts (Optional)" box inside add or edit new post/page](https://plugins.svn.wordpress.org/related-links-inside-content/assets/screenshot-2.jpg)
+!["Select One to Three Related Posts (Optional)" box inside add or edit new post/page](https://ps.w.org/related-links-inside-content/assets/screenshot-1.jpg)
 
 #### Search output
 
-!["Search output](https://plugins.svn.wordpress.org/related-links-inside-content/assets/screenshot-3.jpg)
+!["Search output](https://ps.w.org/related-links-inside-content/assets/screenshot-1.jpg)
 
 ## Changelog
 - 1.0 
