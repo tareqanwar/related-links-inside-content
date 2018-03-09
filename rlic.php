@@ -62,10 +62,20 @@ add_action( 'admin_enqueue_scripts', 'rlic_tareqanwar_js_url' );
 // requires
 require_once('add_custom_field.php');
 require_once('search_posts.php');
-require_once('admin-pages.php');
+require_once('setting_page.php');
 
 // Search post using keyword typed by user
 add_action('wp_ajax_rlic_tareqanwar_search_posts', 'rlic_tareqanwar_search_posts');
+
+// Add setting page link in plugin page
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'rlic_tareqanwar_add_action_links' );
+
+function rlic_tareqanwar_add_action_links ( $links ) {
+ $mylinks = array(
+ '<a href="' . admin_url( 'options-general.php?page=rlic-settings' ) . '">Settings</a>',
+ );
+return array_merge( $links, $mylinks );
+}
 
 
 function rlic_tareqanwar_shorten_text($text)
