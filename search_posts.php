@@ -1,5 +1,5 @@
 <?php 
-function rlic_tareqanwar_get_keyword() {
+function rlic_tareqanwar_search_posts() {
 	if(!isset($_POST['rlic_tareqanwar_nonce'])){
 		die("Permission check failed");
 	}
