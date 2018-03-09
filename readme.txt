@@ -3,7 +3,7 @@ Contributors: trqnwr
 Donate link: paypal.me/trqnwr
 Tags: related post, related link, related story
 Requires at least: 3.3
-Tested up to: 4.0
+Tested up to: 4.9.4
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,7 +40,6 @@ I have plan to add the customization features in next versions.
 2. "Select One to Three Related Posts (Optional)" box inside add or edit new post/page
 3. Search output
 
-screenshots/screenshot-one.png, screenshots/screenshot-two.png, screenshots/screenshot-three.png
 
 == Changelog ==
 = 1.0 =
