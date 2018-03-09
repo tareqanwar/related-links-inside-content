@@ -98,9 +98,12 @@ function rlic_tareqanwar_shorten_text($text)
 function rlic_tareqanwar_related_post_one( $atts ){
   $id = get_the_ID();
   $post_id_one = get_post_meta( $id, 'rlic_tareqanwar_post_link_one', true );
+  // Get or set default text for "Related Story" link label
+  $relatedStoryLabel = esc_attr( get_option('rlic-tareqanwar-releted-story-text') );
+  if($relatedStoryLabel == "") $relatedStoryLabel = "Related Story";
   
   if(is_numeric($post_id_one)) 
-    return "<p class='rlic_tareqanwar_link'>Related Story: <a href='" . get_permalink( $post_id_one ) ."' >". rlic_tareqanwar_shorten_text(get_the_title( $post_id_one )) ."</a></p>";
+    return "<p class='rlic_tareqanwar_link'>". $relatedStoryLabel .": <a href='" . get_permalink( $post_id_one ) ."' >". rlic_tareqanwar_shorten_text(get_the_title( $post_id_one )) ."</a></p>";
 }
 add_shortcode( 'rlic_related_post_one', 'rlic_tareqanwar_related_post_one' );
 
@@ -108,9 +111,12 @@ add_shortcode( 'rlic_related_post_one', 'rlic_tareqanwar_related_post_one' );
 function rlic_tareqanwar_related_post_two( $atts ){
   $id = get_the_ID();
   $post_id_two = get_post_meta( $id, 'rlic_tareqanwar_post_link_two', true );
+  // Get or set default text for "Related Story" link label
+  $relatedStoryLabel = esc_attr( get_option('rlic-tareqanwar-releted-story-text') );
+  if($relatedStoryLabel == "") $relatedStoryLabel = "Related Story";
   
   if(is_numeric($post_id_two)) 
-    return "<p class='rlic_tareqanwar_link'>Related Story: <a href='" . get_permalink( $post_id_two ) ."' >".  rlic_tareqanwar_shorten_text(get_the_title( $post_id_two )) ."</a></p>";
+    return "<p class='rlic_tareqanwar_link'>". $relatedStoryLabel .": <a href='" . get_permalink( $post_id_two ) ."' >".  rlic_tareqanwar_shorten_text(get_the_title( $post_id_two )) ."</a></p>";
 }
 add_shortcode( 'rlic_related_post_two', 'rlic_tareqanwar_related_post_two' );
 
@@ -118,9 +124,12 @@ add_shortcode( 'rlic_related_post_two', 'rlic_tareqanwar_related_post_two' );
 function rlic_tareqanwar_related_post_three( $atts ){
   $id = get_the_ID();
   $post_id_three = get_post_meta( $id, 'rlic_tareqanwar_post_link_three', true );
+  // Get or set default text for "Related Story" link label
+  $relatedStoryLabel = esc_attr( get_option('rlic-tareqanwar-releted-story-text') );
+  if($relatedStoryLabel == "") $relatedStoryLabel = "Related Story";
   
   if(is_numeric($post_id_three)) 
-    return "<p class='rlic_tareqanwar_link'>Related Story: <a href='" . get_permalink( $post_id_three ) ."' >".  rlic_tareqanwar_shorten_text(get_the_title( $post_id_three )) ."</a></p>";
+    return "<p class='rlic_tareqanwar_link'>". $relatedStoryLabel .": <a href='" . get_permalink( $post_id_three ) ."' >".  rlic_tareqanwar_shorten_text(get_the_title( $post_id_three )) ."</a></p>";
 }
 add_shortcode( 'rlic_related_post_three', 'rlic_tareqanwar_related_post_three' );
 ?>
