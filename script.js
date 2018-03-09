@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 		  txt = $(this).val();
       
 		  data = {
-			  			action : "rlic_tareqanwar_get_keyword",
+			  			action : "rlic_tareqanwar_search_posts",
 						rlic_tareqanwar_nonce: rlic_tareqanwar_vars.rlic_tareqanwar_nonce,
 						suggest: txt,
 						num: "one"
@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
     $("#rlic_tareqanwar_new_field_two").keyup(function(){
 		  txt = $(this).val();	 
 		  data = {
-			  			action : "rlic_tareqanwar_get_keyword",
+			  			action : "rlic_tareqanwar_search_posts",
 						rlic_tareqanwar_nonce: rlic_tareqanwar_vars.rlic_tareqanwar_nonce,
 						suggest: txt,
 						num: "two"
@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
     $("#rlic_tareqanwar_new_field_three").keyup(function(){
 		  txt = $(this).val();	 
 		  data = {
-			  			action : "rlic_tareqanwar_get_keyword",
+			  			action : "rlic_tareqanwar_search_posts",
 						rlic_tareqanwar_nonce: rlic_tareqanwar_vars.rlic_tareqanwar_nonce,
 						suggest: txt,
 						num: "three"

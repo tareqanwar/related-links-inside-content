@@ -5,7 +5,7 @@
 * Description: Search and add your related post links directly inside your posts using shortcode.
 * Author: Tareq Anwar
 * Author URI: http://www.tareqanwar.com
-* Version: 1.0
+* Version: 1.01
 * License: GPLv2
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 * Tags: related post, related link, related sotry
@@ -59,10 +59,13 @@ add_action( 'admin_enqueue_scripts', 'rlic_tareqanwar_js_url' );
 */
 
 
-// showing custom field
+// requires
 require_once('add_custom_field.php');
 require_once('search_posts.php');
-add_action('wp_ajax_rlic_tareqanwar_get_keyword', 'rlic_tareqanwar_get_keyword');
+require_once('admin-pages.php');
+
+// Search post using keyword typed by user
+add_action('wp_ajax_rlic_tareqanwar_search_posts', 'rlic_tareqanwar_search_posts');
 
 
 function rlic_tareqanwar_shorten_text($text)
